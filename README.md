@@ -34,3 +34,124 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+# Tidely Studio
+
+Sitio web oficila de Tidely Studio.
+
+Una plataforma construida con Next.js enfocada en ayudar a pequeños negocios a comprender y mejorar su presencia digital mediante auditorías técnicas, contenido educativo y recursos prácticos. 
+
+---
+
+## Objetivo
+
+Crear una plataforma rápida, accesible y escalable que permita ofrecer servicios profesionales y compartir conocimiento técnico de forma clara. 
+
+---
+
+## Tecnologías
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- shadcn/ui
+- Framer Motion
+- Lucide React
+
+---
+
+## Características
+
+- SEO First
+- Accesibilidad WCAG
+- Diseño responsive
+- Arquitectura
+- Componentes reutilizables
+- Alto rendimiento
+
+---
+
+## Instalación
+
+Clonar el repositorio
+
+```bash
+git clone https://github.com/Andrea-Oyarce-Espinoza/tidely-studio.git
+```
+
+Entrar al proyecto
+
+```bash 
+cd tidely-studio
+```
+
+Instalar dependencias
+
+```bash
+npm install
+```
+
+Ejecutar
+
+```bash
+npm run dev
+```
+
+---
+
+## Scripts
+
+```bash
+npm run dev
+npm run build
+npm run start
+npm run lint
+```
+
+---
+
+## Estructura
+
+```
+app/
+components/
+config/
+content/
+docs/
+hooks/
+lib/
+public/
+styles/
+types/
+```
+
+---
+
+## Documentación
+
+Toda la documentación técnica se encuentra en 
+
+```
+docs/
+```
+
+Incluye:
+
+- Arquitectura
+- Sistema de Diseño
+- Roadmap
+- Seguridad
+- Testing
+- Branding
+- Sistema de Auditorías
+
+---
+
+## Licencia 
+
+MIT
+
+---
+
+Desarrollado por Andrea Oyarce
