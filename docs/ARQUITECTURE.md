@@ -1,4 +1,29 @@
-# ARQUITECTURE.md
+# Arquitectura — actualización 2026-11-04
+
+## Dirección vigente
+
+Sitio de servicios web para profesionales que atienden con cita. Recorrido: comprender el servicio → conocer a Andrea y un trabajo real → revisar alcance y precios → reservar una reunión para cotizar.
+
+Stack instalado: Next.js 16, React 19, TypeScript y Tailwind CSS 4. shadcn/ui, Framer Motion y Lucide mencionados más abajo no figuran en package.json; son aspiraciones históricas.
+
+Arquitectura propuesta del MVP:
+
+- `app/layout.tsx`: documento raíz en español y metadatos. Corregida la ubicación del layout del starter; retirado el HTML anidado de `app/api/`.
+- `app/(marketing)/page.tsx`: portada con servicios, precios, proyecto real, proceso, sobre Andrea y agenda.
+- `config/`: datos públicos centralizados y montos aprobados.
+- `public/`: recursos estáticos públicos; nunca archivos privados de clientes.
+- `components/` y `lib/`: bases existentes, preservando trabajo previo no versionado.
+- `docs/`: decisiones y estado verificable.
+
+Sin autenticación ni base de datos en el MVP. La agenda externa mantiene disponibilidad, confirmación y cancelación. No recoger datos de salud. Un futuro CRM puede justificar Supabase; un portal puede justificar Auth. Los precios y enlaces no requieren base de datos.
+
+Último ajuste de alcance: Andrea solicita primero un portafolio personal que muestre su trabajo y conectar GitHub y Vercel. Precios y agenda para cotizar se posponen. Vercel vuelve a ser el hosting preferido; comprobar elegibilidad de Hobby con el contenido final. No existe despliegue verificado de este proyecto. Ver ACCESS_AND_DEPLOYMENT.md.
+
+Comprobaciones previas al lanzamiento: build, TypeScript, revisión móvil y teclado, enlaces válidos, precios aprobados, reserva completa con America/Santiago y otra zona horaria. No afirmar validaciones todavía no realizadas.
+
+---
+
+## Antecedentes históricos (versión 1.0, superados donde contradigan lo anterior)
 
 > Proyecto: Tidely Studio
 > Documento: Arquitectura
@@ -112,4 +137,4 @@ UI
 
 # Regla principal
 
-Si una nueva funcionalidad obliga a modificar muchos módulos existentes, la arquitectura debe revisarse. 
+Si una nueva funcionalidad obliga a modificar muchos módulos existentes, la arquitectura debe revisarse.

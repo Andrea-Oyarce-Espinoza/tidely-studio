@@ -1,3 +1,5 @@
+import type { NavigationItem } from "./navigation";
+
 /**
  * Accesos rápidos.
  */
