@@ -9,7 +9,7 @@ Stack instalado: Next.js 16, React 19, TypeScript y Tailwind CSS 4. shadcn/ui, F
 Arquitectura propuesta del MVP:
 
 - `app/layout.tsx`: documento raíz en español y metadatos. Corregida la ubicación del layout del starter; retirado el HTML anidado de `app/api/`.
-- `app/(marketing)/page.tsx`: portada con servicios, precios, proyecto real, proceso, sobre Andrea y agenda.
+- `app/(marketing)/page.tsx`: portafolio con enfoque, proyecto real, proceso, sobre Andrea y enlaces a Instagram. Precios y agenda pospuestos.
 - `config/`: datos públicos centralizados y montos aprobados.
 - `public/`: recursos estáticos públicos; nunca archivos privados de clientes.
 - `components/` y `lib/`: bases existentes, preservando trabajo previo no versionado.
@@ -17,7 +17,7 @@ Arquitectura propuesta del MVP:
 
 Sin autenticación ni base de datos en el MVP. La agenda externa mantiene disponibilidad, confirmación y cancelación. No recoger datos de salud. Un futuro CRM puede justificar Supabase; un portal puede justificar Auth. Los precios y enlaces no requieren base de datos.
 
-Último ajuste de alcance: Andrea solicita primero un portafolio personal que muestre su trabajo y conectar GitHub y Vercel. Precios y agenda para cotizar se posponen. Vercel vuelve a ser el hosting preferido; comprobar elegibilidad de Hobby con el contenido final. No existe despliegue verificado de este proyecto. Ver ACCESS_AND_DEPLOYMENT.md.
+Último ajuste de alcance: portafolio personal; precios y agenda pospuestos. Desplegado en Vercel Hobby por elección de Andrea, en https://tidy-studio.vercel.app. Ver ACCESS_AND_DEPLOYMENT.md para commit, deployment y comprobaciones. Revisar elegibilidad del plan si se incorpora un uso comercial.
 
 Comprobaciones previas al lanzamiento: build, TypeScript, revisión móvil y teclado, enlaces válidos, precios aprobados, reserva completa con America/Santiago y otra zona horaria. No afirmar validaciones todavía no realizadas.
 

@@ -13,10 +13,10 @@
 - [ ] Pospuesto: agenda de cotización y pruebas de disponibilidad, confirmación y cancelación.
 - [x] Confirmar accesos GitHub y hosting; reutilizar proyecto `tidy-studio` creado por Andrea.
 - [x] Build/TypeScript y ESLint correctos; auditoría de producción sin avisos conocidos.
-- [ ] Revisar visualmente versión publicada; localhost no fue accesible desde el navegador integrado.
+- [x] Revisar portada publicada y enlace interno a proyectos en navegador; localhost no fue accesible desde el navegador integrado.
 - [ ] Completar build, TypeScript, revisión responsive, teclado y metadatos.
 - [ ] Revisar privacidad del flujo de agenda elegido.
-- [ ] Desplegar y registrar URL, fecha, commit y verificaciones.
+- [x] Desplegar y registrar URL, fecha, commit y verificaciones en ACCESS_AND_DEPLOYMENT.md.
 
 Después de validar demanda: formulario/CRM, Supabase, portal o storage privado. Fuera del MVP: ecommerce, historial clínico, agenda propia y pagos.
 

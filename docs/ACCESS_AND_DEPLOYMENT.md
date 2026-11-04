@@ -1,14 +1,23 @@
 # Accesos y despliegue
 
-Actualizado: 2026-11-04. Estado: definición y documentación; sin despliegue confirmado.
+Actualizado: 2026-11-04. Estado: portafolio desplegado y verificado en https://tidy-studio.vercel.app.
 
 ## Acceso comprobado
 
 Lectura y edición del checkout local `C:/proyectos/tidely-studio`. Remote configurado: `https://github.com/Andrea-Oyarce-Espinoza/tidely-studio.git`. Esto no demuestra permiso para hacer push. Se pudo leer el chat «Reorienta marca para terapias» y recuperar el enfoque visual sin modificar ese proyecto.
 
-GitHub conectado y verificado el 2026-11-04: el repositorio es público, su rama predeterminada es `main` y la API confirma permisos `pull` y `push` (también administración). Se utilizarán solo los permisos necesarios para este trabajo. No se ha hecho push.
+GitHub conectado y verificado el 2026-11-04: repositorio público, rama `main`, permisos de lectura/escritura confirmados. Push realizado del commit `baa94b8` con la portada y correcciones.
 
-Vercel conectado y verificado el 2026-11-04 mediante su integración. Equipo: `andrea-oyarce-espinozas-projects`, ID `team_dxUavSSz7RaIVWKyjXMXdNQp`, plan Hobby. La consulta de contexto no devolvió proyectos vinculados y la búsqueda por `tidely` devolvió cero proyectos. No se ha creado ni desplegado este proyecto todavía. La CLI de Vercel está instalada; su sesión es independiente y no se ha comprobado. Supabase no se necesita para el MVP.
+Vercel conectado y verificado: equipo `andrea-oyarce-espinozas-projects`, ID `team_dxUavSSz7RaIVWKyjXMXdNQp`, plan Hobby. Andrea creó el proyecto `tidy-studio` (sin «el»), ID `prj_XTTq3bBCmi2pzY4p2ylbw957NCx1`. CLI autenticada y verificada; utilizada como alternativa porque algunas consultas del plugin devolvían errores. Supabase no se necesita para el portafolio.
+
+## Despliegue comprobado
+
+- Producción: https://tidy-studio.vercel.app
+- Deployment: `dpl_GmCoiEEX8m1BmkZSNsgyDLNU2uPC`, estado Ready.
+- Código: `baa94b8`, rama `main`, publicado el 2026-11-04.
+- Build de Vercel: 23 segundos. Respuesta pública HTTP 200 con título y contenido nuevos.
+- Revisión en navegador: portada visible y enlace interno «Conoce mi trabajo» funcionando. Revisión móvil y recorrido exhaustivo por teclado pendientes.
+- GitHub dispara despliegues de producción al actualizar `main`. No se creó otro proyecto ni se modificó Francia Academy.
 
 ## Cómo habilitar la gestión
 
@@ -16,7 +25,7 @@ Vercel conectado y verificado el 2026-11-04 mediante su integración. Equipo: `a
 2. Conectar Vercel mediante la integración disponible. Andrea precisó que la primera etapa será un portafolio personal para mostrar lo que hace. Andrea realiza login y MFA. No pegar tokens en el chat. Revisar elegibilidad de Hobby conforme al uso real antes de publicar.
 3. Autorizar la integración del hosting con GitHub para este repositorio. Importar como proyecto Next.js y confirmar la rama real de producción. Los cambios enviados a esa rama podrán disparar despliegues automáticos. Verificar comandos y configuración según el proveedor seleccionado.
 4. Para la primera etapa, confirmar proyectos y presentación personal. Precios y agenda para cotizaciones quedan pospuestos por el nuevo alcance. Si se retoman, no se necesita acceso completo al calendario para enlazar una agenda.
-5. Preparar preview, revisar móvil, teclado, enlaces y una reserva completa. Desplegar con el subdominio gratuito asignado y registrar la URL comprobada. Ningún nombre está reservado todavía.
+5. Mantener las comprobaciones antes de nuevas publicaciones. El subdominio asignado ya es `tidy-studio.vercel.app`. No hay reservas en esta versión.
 
 Las conexiones habilitan operaciones específicas, no acceso ilimitado ni ejecución autónoma permanente. Los permisos reales dependen de cada integración. No solicitar contraseñas, códigos MFA ni claves administrativas en mensajes.
 

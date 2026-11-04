@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-04 — Publicación confirmada
+
+- Commit `baa94b8` enviado a `main`; despliegue automático de Vercel Ready en 23 segundos, ID `dpl_GmCoiEEX8m1BmkZSNsgyDLNU2uPC`.
+- URL pública https://tidy-studio.vercel.app responde HTTP 200 con el portafolio nuevo.
+- Verificadas visualmente portada y navegación interna a proyectos en navegador. Pendiente revisión móvil y recorrido exhaustivo con teclado.
+- Documentada la causa del fallo inicial: import de tipo faltante. No se modificó el proyecto Francia Academy ni se creó otro proyecto Vercel.
+
 ## 2026-11-04 — Primera portada y corrección de despliegue
 
 - Implementado portafolio Tidy Studio: enfoque, Francia Academy, proceso, Andrea y enlaces a Instagram. Paleta marfil, morado, lavanda y menta; ilustraciones CSS y diseño adaptable. Sin precios ni agenda comercial.
