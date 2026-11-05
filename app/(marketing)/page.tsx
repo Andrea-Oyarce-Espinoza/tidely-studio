@@ -58,7 +58,6 @@ export default function Home() {
 
         <section className="contact-section wrap" aria-labelledby="contact-title"><span className="contact-star" aria-hidden="true">✳</span><p className="eyebrow">SIGAMOS EN CONTACTO</p><h2 id="contact-title">Las buenas ideas<br />empiezan conversando.</h2><p>Comparto mi trabajo, aprendizajes y esta nueva etapa en Instagram.<br />Me encantará encontrarte por ahí.</p><a className="button light" href={instagram}>Hola, Andrea <span aria-hidden="true">↗</span></a></section>
       </main>
-      <footer className="site-footer wrap"><a className="wordmark" href="#inicio">tidy<span className="wordmark-dot">.</span><span className="wordmark-small">STUDIO</span></a><p>Un espacio digital. Una persona detrás.</p><span>Andrea Oyarce · Chile · {new Date().getFullYear()}</span></footer>
     </>
   );
 }

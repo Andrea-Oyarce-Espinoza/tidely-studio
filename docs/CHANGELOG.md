@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-04 — Páginas legales y footer
+
+- Añadidas privacidad, términos y aviso informativo adaptados al portafolio, con fecha de actualización y contacto real por Instagram (correo público aún no creado).
+- Footer global inspirado en Francia Academy, con disclaimer de desarrollo web y enlaces en todas las páginas.
+- Solicitud enviada a v0 y propuesta recibida: aplicadas recomendaciones visuales, navegación activa, foco y áreas táctiles; detalles y fuentes en LEGAL.md.
+- Sin scripts de analítica, formularios ni dependencias nuevas. No se afirma validación jurídica profesional.
+
 ## 2026-11-04 — Publicación confirmada
 
 - Commit `baa94b8` enviado a `main`; despliegue automático de Vercel Ready en 23 segundos, ID `dpl_GmCoiEEX8m1BmkZSNsgyDLNU2uPC`.
