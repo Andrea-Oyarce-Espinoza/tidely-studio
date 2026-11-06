@@ -1,6 +1,7 @@
 /* Seasonal artwork: all shapes are native CSS. Motion lives in HolidayScene. */
 .seasonal-hero-art { position: relative; min-width: 0; padding-bottom: 44px; }
 .seasonal-hero-art .hero-art { width: 100%; }
+.seasonal-hero-art .art-sticker { z-index: 6; }
 .holiday-scene { position: absolute; inset: 0; pointer-events: none; }
 .holiday-drawings { position: absolute; inset: 0 0 44px; overflow: hidden; border-radius: 100px 100px 12px 12px; }
 .holiday-garland { position: absolute; z-index: 3; top: 46px; left: 28px; right: 28px; height: 35px; border-bottom: 1px solid var(--purple); border-radius: 0 0 50% 50%; display: flex; justify-content: space-between; align-items: flex-end; }
@@ -59,5 +60,5 @@
   .growth-planner { max-width: 390px; width: calc(100% - 10px); margin-inline: auto; }
   .growth-section h2 { font-size: clamp(31px, 8vw, 42px); }
   .growth-section .button { gap: 18px; padding-inline: 18px; }
-  .holiday-tree { right: 31px; top: 145px; }
+  .holiday-tree { right: 31px; top: 125px; }
 }
