@@ -1,3 +1,7 @@
+import HolidayScene from "@/components/holiday-scene";
+import GrowthLabSection from "@/components/growth-lab-section";
+import "./home.css";
+
 const instagram = "https://www.instagram.com/mama_programadora_/";
 
 const approach = [
@@ -12,7 +16,7 @@ export default function Home() {
       <a className="skip-link" href="#contenido">Saltar al contenido</a>
       <header className="site-header wrap">
         <a className="wordmark" href="#inicio" aria-label="Tidy Studio, inicio">tidy<span className="wordmark-dot">.</span><span className="wordmark-small">STUDIO</span></a>
-        <nav aria-label="Navegación principal"><a href="#enfoque">Mi enfoque</a><a href="#proyectos">Proyectos</a><a href="#sobre-mi">Sobre mí</a></nav>
+        <nav aria-label="Navegación principal"><a href="#enfoque">Mi enfoque</a><a href="#proyectos">Proyectos</a><a href="#herramientas">Herramienta gratis</a><a href="#sobre-mi">Sobre mí</a></nav>
         <a className="header-contact" href={instagram}>Conectemos <span aria-hidden="true">↗</span></a>
       </header>
 
@@ -23,17 +27,19 @@ export default function Home() {
             <h1 id="hero-title">Detrás de cada web,<br />hay una <span>persona.</span></h1>
             <p className="hero-description">Y detrás de Tidy Studio, estoy yo. Soy Andrea y me gusta transformar ideas en espacios digitales claros, cercanos y con identidad.</p>
             <a className="button" href="#proyectos">Conoce mi trabajo <span aria-hidden="true">↗</span></a>
-            <p className="hero-note">Hecho con calma, cuidado y mucho propósito.</p>
+            <p className="hero-note">Hecho con calma, cuidado y un poquito de magia navideña.</p>
           </div>
-          <div className="hero-art" aria-label="Ilustración de una web organizada con espacio para las personas" role="img">
-            <div className="art-label">UN POCO DE ORDEN. MUCHO DE TI.</div>
+          <div className="seasonal-hero-art">
+          <div className="hero-art" aria-label="Ilustración de una web con un saludo de Navidad" role="img">
+            <div className="art-label">UNA NAVIDAD CON ESPACIO PARA CREAR.</div>
             <div className="browser-art">
               <div className="browser-bar"><span /><span /><span /><i>un espacio para tu proyecto</i></div>
               <div className="art-content"><div className="art-greeting">Hola, qué bueno<br />encontrarte aquí.</div><div className="art-rule" /><div className="art-rule short" /><div className="art-pill">Tu esencia, en la web <span>↗</span></div></div>
-              <div className="art-flower" aria-hidden="true">✳</div>
             </div>
             <div className="art-sticker">Pensado para personas.<br /><strong>Creado por una también.</strong></div>
-            <span className="art-caption">ideas + código + cercanía</span>
+            <span className="art-caption">ideas + código + espíritu navideño</span>
+          </div>
+          <HolidayScene />
           </div>
         </section>
 
@@ -51,6 +57,8 @@ export default function Home() {
             <div className="project-info"><p className="eyebrow">DESARROLLO WEB</p><h3>Francia Academy</h3><p>Un sitio que desarrollé para una psicóloga. Un trabajo real que reúne mi interés por la tecnología y por los proyectos que nacen de las personas.</p><p>Te invito a recorrerlo y conocer de primera mano lo que construyo.</p><a className="text-link" href="https://francia-academy.vercel.app" target="_blank" rel="noopener noreferrer">Visitar el proyecto <span aria-hidden="true">↗</span><span className="sr-only"> (se abre en otra pestaña)</span></a><span className="project-caption">Presentación gráfica del proyecto; visita el sitio para ver su diseño.</span></div>
           </article>
         </div></section>
+
+        <GrowthLabSection />
 
         <section className="section wrap" aria-labelledby="process-title"><p className="eyebrow">03 / MI FORMA DE CREAR</p><h2 id="process-title">Primero entender.<br /><span>Después, construir.</span></h2><div className="approach-grid">{approach.map((item) => <article className="approach" key={item.number}><span className="approach-number">{item.number}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></section>
 

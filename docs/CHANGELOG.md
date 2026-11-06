@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-05 — Navidad y Tidy Growth Lab
+
+- Decoración navideña en el inicio con dibujos CSS y luces animadas en JavaScript, con pausa y respeto de movimiento reducido.
+- Nueva sección y acceso de navegación a Tidy Growth Lab: calendario editorial, métricas manuales y exportación, con enlace externo a la herramienta gratuita. Sin garantías de seguidores.
+- Detalles y retiro de temporada en SEASONAL.md. Sin nuevas dependencias.
+
 ## 2026-11-04 — Páginas legales y footer
 
 - Añadidas privacidad, términos y aviso informativo adaptados al portafolio, con fecha de actualización y contacto real por Instagram (correo público aún no creado).
