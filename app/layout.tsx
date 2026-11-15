@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SiteFooter from "@/components/site-footer";
+import CatCompanion from "@/components/cat-companion";
 
 export const metadata: Metadata = {
   title: "Tidy Studio — Andrea Oyarce · Desarrollo web",
@@ -8,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="es-CL"><body>{children}<SiteFooter /></body></html>;
+  return <html lang="es-CL"><body>{children}<SiteFooter /><CatCompanion /></body></html>;
 }
