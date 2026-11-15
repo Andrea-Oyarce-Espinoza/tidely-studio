@@ -26,6 +26,9 @@
   touch-action: manipulation;
 }
 .cat-toggle svg { display: block; width: 96px; height: 104px; overflow: visible; }
+.cat-companion[data-compact="true"]:not([data-open="true"]) { width: 64px; }
+.cat-companion[data-compact="true"]:not([data-open="true"]) .cat-toggle { width: 64px; min-height: 72px; }
+.cat-companion[data-compact="true"]:not([data-open="true"]) .cat-toggle svg { width: 56px; height: 60px; }
 .cat-outline { fill: #faf7f4; }
 .cat-tail { transform-origin: 43px 113px; }
 .cat-eyes { transform-box: fill-box; transform-origin: center; }

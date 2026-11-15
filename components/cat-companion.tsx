@@ -36,6 +36,7 @@ export default function CatCompanion() {
   const [walking, setWalking] = useState(false);
   const [background, setBackground] = useState(false);
   const [side, setSide] = useState<"right" | "left" | "rest">("right");
+  const [compact, setCompact] = useState(false);
   const companion = useRef<HTMLElement>(null);
   const homeControl = useRef<HTMLButtonElement>(null);
   const animationAllowed = !paused && !reduced && !background && !hidden;
@@ -56,11 +57,15 @@ export default function CatCompanion() {
       const obstacles = Array.from(document.querySelectorAll<HTMLElement>("a, button, input, textarea, select, [contenteditable='true'], [role='dialog']"))
         .filter((element) => !element.closest(".cat-companion, .cat-companion-home") && element.getClientRects().length > 0)
         .map((element) => element.getBoundingClientRect());
-      const occupied = (right: boolean) => {
-        const left = right ? window.innerWidth - width - 16 : 16;
-        return obstacles.some((rect) => rect.left < left + width + 8 && rect.right > left - 8 && rect.top < bottom + 8 && rect.bottom > bottom - height - 8);
+      const occupied = (right: boolean, candidateWidth = width, candidateHeight = height) => {
+        const left = right ? window.innerWidth - candidateWidth - 16 : 16;
+        return obstacles.some((rect) => rect.left < left + candidateWidth + 8 && rect.right > left - 8 && rect.top < bottom + 8 && rect.bottom > bottom - candidateHeight - 8);
       };
-      setSide(!occupied(true) ? "right" : !occupied(false) ? "left" : "rest");
+      if (!occupied(true)) { setSide("right"); setCompact(false); }
+      else if (!occupied(false)) { setSide("left"); setCompact(false); }
+      else if (!mobile && !occupied(true, 64, 72)) { setSide("right"); setCompact(true); }
+      else if (!mobile && !occupied(false, 64, 72)) { setSide("left"); setCompact(true); }
+      else setSide("rest");
     };
     const checkSpace = () => { cancelAnimationFrame(frame); frame = requestAnimationFrame(findSpace); };
     const onScroll = () => {
@@ -114,7 +119,7 @@ export default function CatCompanion() {
       </button>
       <span>Un poco de compañía, a tu ritmo.</span>
     </div>
-    {!hidden ? <aside ref={companion} className="cat-companion" aria-label="Gato acompañante opcional" data-side={side} data-open={open} data-moving={animationAllowed} data-walking={walking && animationAllowed} data-petted={petted}>
+    {!hidden ? <aside ref={companion} className="cat-companion" aria-label="Gato acompañante opcional" data-side={side} data-open={open} data-compact={compact} data-moving={animationAllowed} data-walking={walking && animationAllowed} data-petted={petted}>
       {open ? <div className="cat-panel" id="cat-companion-options">
         <p>Compañía, a tu ritmo.</p>
         <span className="cat-greeting" role="status">{petted ? "Prrr… gracias por la caricia ♡" : "Estoy aquí mientras exploras."}</span>
