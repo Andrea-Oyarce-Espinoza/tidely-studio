@@ -1,5 +1,6 @@
 import Link from "next/link";
 import LegalNavigation from "@/components/legal-navigation";
+import SiteFooter from "@/components/site-footer";
 
 export default function LegalLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -13,6 +14,7 @@ export default function LegalLayout({ children }: Readonly<{ children: React.Rea
         <aside className="legal-aside"><p className="eyebrow">CON CLARIDAD Y CERCANÍA</p><LegalNavigation label="Documentos legales" /></aside>
         <article className="legal-content">{children}</article>
       </main>
+      <SiteFooter />
     </>
   );
 }

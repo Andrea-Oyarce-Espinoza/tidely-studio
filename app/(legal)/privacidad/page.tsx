@@ -9,7 +9,7 @@ export default function PrivacyPage() {
     <p className="legal-date">Última actualización: 4 de noviembre de 2026</p>
     <p className="legal-lead">Este portafolio está pensado para mostrar mi trabajo, no para pedirte datos. Aquí te explico qué ocurre al visitarlo y al contactarme.</p>
     <h2>1. Quién está detrás</h2>
-    <p>Andrea Oyarce, en Chile, es la responsable de Tidy Studio y de la información que recibe directamente a través de su canal de contacto. Puedes enviar tus consultas por mensaje a <a href="https://www.instagram.com/mama_programadora_/">@mama_programadora_ en Instagram</a>. Actualmente no hay un correo público de contacto habilitado.</p>
+    <p>Andrea Oyarce, en Chile, es la responsable de Tidy Studio y de la información que recibe directamente a través de su canal de contacto. Puedes enviar tus consultas por mensaje a <a href="https://www.instagram.com/tidy_studio_dev/">@tidy_studio_dev en Instagram</a>. Actualmente no hay un correo público de contacto habilitado.</p>
     <h2>2. Datos al navegar</h2>
     <p>Esta versión no tiene cuentas de usuario, formularios, newsletter, pagos ni agenda propia. No solicita datos de salud ni documentos personales. El código del sitio no incorpora herramientas de analítica, píxeles publicitarios ni cookies propias para seguimiento.</p>
     <p>Para entregar las páginas y proteger la infraestructura, Vercel, proveedor de alojamiento, puede procesar datos técnicos como dirección IP, navegador, fecha, rutas solicitadas y registros de solicitudes o errores. No debes interpretar la ausencia de formularios como ausencia absoluta de tratamiento técnico.</p>

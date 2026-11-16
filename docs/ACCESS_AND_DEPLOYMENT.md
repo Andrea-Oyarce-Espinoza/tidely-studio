@@ -1,5 +1,17 @@
 # Accesos y despliegue
 
+## Recuperación del 15 de noviembre de 2026
+
+El dominio público servía `dpl_G8wkmk9WBC6Kc8u88nWXNXebJtgU`, sin rutas de blog/editor. GitHub main estaba en `891d17d`, con la portada anterior; el código del blog y de Sanity seguía sin versionar en el checkout. Se recuperan esas rutas y se guarda el cambio completo en Git para evitar otra regresión al desplegar desde main.
+
+Blog permanente en portada, herramienta Growth Lab retirada y Francia Academy actualizado a https://franciavarubin.cl. Verificación HTTP de regresión: `node scripts/verify-home.mjs URL`. El catálogo editable en código está en content/projects.ts y solo contiene Francia Academy. No se modifican ni se publican entradas de Sanity durante esta recuperación.
+
+## Actualización: blog y panel privado
+
+Producción actual: https://tidy-studio.vercel.app. Despliegue CLI `dpl_2yAtZsJ2tDH8D2cE4wvtxsVn6sV4`, READY, comprobado y promovido. Blog en `/blog`; Studio privado en `/admin`, Sanity proyecto `zwt63c3h`, dataset `production`, cuenta de Andrea verificada con Google. CORS de dominio de producción autorizado expresamente. Detalles en BLOG_ADMIN.md. La automatización de los lunes también prepara el borrador en Sanity sin publicarlo.
+
+Despliegue desde checkout local con cambios aún sin commit/push; las referencias a commits y despliegues siguientes describen el historial previo. Antes de un futuro despliegue Git, conservar este código en el repositorio para no reemplazar el panel con una versión anterior.
+
 Actualizado: 2026-11-04. Estado: portafolio desplegado y verificado en https://tidy-studio.vercel.app.
 
 ## Acceso comprobado

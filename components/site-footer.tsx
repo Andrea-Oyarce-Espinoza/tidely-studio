@@ -8,6 +8,7 @@ export default function SiteFooter() {
         <Link className="wordmark" href="/" aria-label="Tidy Studio, inicio">tidy<span className="wordmark-dot">.</span><span className="wordmark-small">STUDIO</span></Link>
         <p>Un espacio digital. Una persona detrás.</p>
         <span>Andrea Oyarce · Chile</span>
+        <Link className="text-link" href="/blog">Blog · Notas con sentido</Link>
       </div>
       <div className="footer-legal">
         <p>© {new Date().getFullYear()} Tidy Studio · Andrea Oyarce. Los derechos de cada proyecto pertenecen a sus respectivos titulares.</p>

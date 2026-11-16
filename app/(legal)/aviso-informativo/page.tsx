@@ -17,6 +17,6 @@ export default function DisclaimerPage() {
     <h2>Salud y bienestar como enfoque de diseño</h2>
     <p>Las menciones a psicología, salud o bienestar describen el tipo de proyectos que me interesa desarrollar. Tidy Studio no presta atención clínica, diagnósticos ni asesoramiento sanitario. Las consultas sobre atención o contenidos de un proyecto enlazado corresponden a su profesional o entidad responsable.</p>
     <h2>Consultas y correcciones</h2>
-    <p>Si necesitas aclarar una referencia o encuentras un error, puedes escribir a <a href="https://www.instagram.com/mama_programadora_/">@mama_programadora_ en Instagram</a>. Para conocer el uso de datos y las condiciones de navegación, revisa <Link href="/privacidad">Privacidad</Link> y los <Link href="/terminos">Términos y condiciones</Link>.</p>
+    <p>Si necesitas aclarar una referencia o encuentras un error, puedes escribir a <a href="https://www.instagram.com/tidy_studio_dev/">@tidy_studio_dev en Instagram</a>. Para conocer el uso de datos y las condiciones de navegación, revisa <Link href="/privacidad">Privacidad</Link> y los <Link href="/terminos">Términos y condiciones</Link>.</p>
   </>;
 }

@@ -9,7 +9,7 @@ export default function TermsPage() {
     <p className="legal-date">Última actualización: 4 de noviembre de 2026</p>
     <p className="legal-lead">Estas condiciones explican el uso de este portafolio personal y el alcance de lo que comparto aquí.</p>
     <h2>1. Titular y propósito</h2>
-    <p>Tidy Studio es el portafolio de Andrea Oyarce, desarrolladora web en Chile. Presenta su enfoque, trayectoria y proyectos. Puedes consultar dudas sobre el sitio por mensaje a <a href="https://www.instagram.com/mama_programadora_/">@mama_programadora_ en Instagram</a>.</p>
+    <p>Tidy Studio es el portafolio de Andrea Oyarce, desarrolladora web en Chile. Presenta su enfoque, trayectoria y proyectos. Puedes consultar dudas sobre el sitio por mensaje a <a href="https://www.instagram.com/tidy_studio_dev/">@tidy_studio_dev en Instagram</a>.</p>
     <h2>2. Un sitio informativo</h2>
     <p>La navegación es gratuita. Esta versión no permite crear cuentas, contratar servicios, pagar ni reservar horas. La información no constituye una oferta vinculante ni una cotización. Si en el futuro acordamos un trabajo, sus entregables, precio, plazos, revisiones, licencias y mantenimiento deberán definirse en un acuerdo específico.</p>
     <h2>3. Uso respetuoso</h2>

@@ -1,8 +1,10 @@
+import Link from "next/link";
+import HomeBlogSection from "@/components/home-blog-section";
+import { projects } from "@/content/projects";
 import HolidayScene from "@/components/holiday-scene";
-import GrowthLabSection from "@/components/growth-lab-section";
 import "./home.css";
 
-const instagram = "https://www.instagram.com/mama_programadora_/";
+const instagram = "https://www.instagram.com/tidy_studio_dev/";
 
 const approach = [
   { number: "01", title: "Escuchar primero", text: "Entender a la persona detrás del proyecto, lo que hace y lo que necesita comunicar." },
@@ -10,13 +12,15 @@ const approach = [
   { number: "03", title: "Construir con intención", text: "Cuidar los detalles, desde cómo se lee en un teléfono hasta el siguiente paso de quien visita la web." },
 ];
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
   return (
     <>
       <a className="skip-link" href="#contenido">Saltar al contenido</a>
       <header className="site-header wrap">
         <a className="wordmark" href="#inicio" aria-label="Tidy Studio, inicio">tidy<span className="wordmark-dot">.</span><span className="wordmark-small">STUDIO</span></a>
-        <nav aria-label="Navegación principal"><a href="#enfoque">Mi enfoque</a><a href="#proyectos">Proyectos</a><a href="#herramientas">Herramienta gratis</a><a href="#sobre-mi">Sobre mí</a></nav>
+        <nav aria-label="Navegación principal"><a href="#enfoque">Mi enfoque</a><a href="#proyectos">Proyectos</a><a href="#sobre-mi">Sobre mí</a><Link href="/blog">Blog</Link></nav>
         <a className="header-contact" href={instagram}>Conectemos <span aria-hidden="true">↗</span></a>
       </header>
 
@@ -47,22 +51,23 @@ export default function Home() {
 
         <section className="section wrap focus-section" id="enfoque" aria-labelledby="focus-title">
           <div><p className="eyebrow">01 / MI ENFOQUE</p><h2 id="focus-title">Tú te dedicas<br />a las personas.<br /><span>Tu web también puede.</span></h2></div>
-          <div className="focus-copy"><p>Me interesa crear sitios para profesionales que atienden con cita. Especialmente en salud, terapias y bienestar, donde la confianza empieza mucho antes de la primera consulta.</p><p>Espacios que ayuden a entender qué haces, conocer tus servicios y encontrar cómo dar el siguiente paso. Sin perder lo más importante: tu forma de acompañar.</p><div className="tags"><span>Salud</span><span>Bienestar</span><span>Servicios con cita</span></div><p className="small-note">Una dirección que estoy construyendo, proyecto a proyecto.</p></div>
+          <div className="focus-copy"><p>Me interesa crear sitios personalizados para profesionales independientes. En educación, salud, terapias y otras áreas, cada persona tiene una manera propia de acompañar y necesidades distintas en su trabajo.</p><p>Espacios que ayuden a entender qué haces y que puedan crecer contigo: un calendario, un acceso privado, un panel de administración o documentos PDF pensados para tu rubro. El punto de partida es escuchar qué necesitas.</p><div className="tags"><span>Educación</span><span>Salud y bienestar</span><span>Profesionales independientes</span></div><p className="small-note">Una dirección que estoy construyendo, proyecto a proyecto.</p></div>
         </section>
 
         <section className="project-section" id="proyectos" aria-labelledby="project-title"><div className="wrap section">
-          <div className="section-heading"><div><p className="eyebrow">02 / UN PROYECTO REAL</p><h2 id="project-title">Del propósito<br /><span>a la pantalla.</span></h2></div><p>Cada proyecto tiene su historia.<br />Este es parte de la mía.</p></div>
-          <article className="project-card">
-            <div className="project-visual"><span className="project-overline">PROYECTO / FRANCIA ACADEMY</span><div className="project-monogram" aria-hidden="true">f<span>.</span></div><p>Un proyecto con<br /><em>nombre propio.</em></p><span className="project-visual-foot">DESARROLLO WEB · ANDREA OYARCE</span></div>
-            <div className="project-info"><p className="eyebrow">DESARROLLO WEB</p><h3>Francia Academy</h3><p>Un sitio que desarrollé para una psicóloga. Un trabajo real que reúne mi interés por la tecnología y por los proyectos que nacen de las personas.</p><p>Te invito a recorrerlo y conocer de primera mano lo que construyo.</p><a className="text-link" href="https://francia-academy.vercel.app" target="_blank" rel="noopener noreferrer">Visitar el proyecto <span aria-hidden="true">↗</span><span className="sr-only"> (se abre en otra pestaña)</span></a><span className="project-caption">Presentación gráfica del proyecto; visita el sitio para ver su diseño.</span></div>
-          </article>
+          <div className="section-heading"><div><p className="eyebrow">02 / PROYECTOS</p><h2 id="project-title">Ideas que encuentran<br /><span>su propio espacio.</span></h2></div><p>Proyectos reales, hechos con cuidado.<br />Aquí compartiré los que vayan tomando forma.</p></div>
+          <div className="projects-list">{projects.map((project) => <article className="project-card" key={project.id}>
+            <div className="project-visual"><span className="project-overline">PROYECTO / {project.name.toUpperCase()}</span><div className="project-monogram" aria-hidden="true">{project.monogram}<span>.</span></div><p>Un proyecto con<br /><em>nombre propio.</em></p><span className="project-visual-foot">DESARROLLO WEB · ANDREA OYARCE</span></div>
+            <div className="project-info"><p className="eyebrow">DESARROLLO WEB · EN PRODUCCIÓN</p><h3>{project.name}</h3><p>{project.description}</p><div className="tags">{project.features.map((feature) => <span key={feature}>{feature}</span>)}</div><p>{project.note}</p><a className="text-link" href={project.url} target="_blank" rel="noopener noreferrer">Visitar {project.domain} <span aria-hidden="true">↗</span><span className="sr-only"> (se abre en otra pestaña)</span></a><span className="project-caption">Presentación gráfica del proyecto; visita el sitio para ver su diseño.</span></div>
+          </article>)}</div>
         </div></section>
 
-        <GrowthLabSection />
+        <HomeBlogSection />
 
-        <section className="section wrap" aria-labelledby="process-title"><p className="eyebrow">03 / MI FORMA DE CREAR</p><h2 id="process-title">Primero entender.<br /><span>Después, construir.</span></h2><div className="approach-grid">{approach.map((item) => <article className="approach" key={item.number}><span className="approach-number">{item.number}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></section>
+        <section className="section wrap" aria-labelledby="process-title"><p className="eyebrow">04 / MI FORMA DE CREAR</p><h2 id="process-title">Primero entender.<br /><span>Después, construir.</span></h2><div className="approach-grid">{approach.map((item) => <article className="approach" key={item.number}><span className="approach-number">{item.number}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></section>
 
-        <section className="about-section wrap" id="sobre-mi" aria-labelledby="about-title"><div className="about-mark" aria-hidden="true"><span>ao.</span><p>LA PERSONA<br />DETRÁS DEL CÓDIGO</p></div><div><p className="eyebrow">04 / MUCHO GUSTO</p><h2 id="about-title">Soy Andrea.<br /><span>Y esto es Tidy Studio.</span></h2><p>Soy desarrolladora web y la persona detrás de Mamá Programadora. Tidy Studio es una nueva etapa de ese camino: un lugar para compartir lo que hago y la manera en que entiendo la web.</p><p>Me importa que la tecnología se sienta cercana. Que las cosas tengan sentido. Y que una web pueda hablar de ti con la misma claridad con la que tú hablas de lo que te apasiona.</p><a className="text-link" href={instagram}>Encuéntrame en Instagram <span aria-hidden="true">↗</span></a></div></section>
+        <section className="about-section wrap" id="sobre-mi" aria-labelledby="about-title"><div className="about-mark" aria-hidden="true"><span>ao.</span><p>LA PERSONA<br />DETRÁS DEL CÓDIGO</p></div><div><p className="eyebrow">05 / MUCHO GUSTO</p><h2 id="about-title">Soy Andrea.<br /><span>Y esto es Tidy Studio.</span></h2><p>Soy licenciada en educación, desarrolladora web y la persona detrás de Mamá Programadora. Tidy Studio es una nueva etapa de ese camino: un lugar para compartir lo que hago y la manera en que entiendo la web.</p><p>La educación y las formas en que aprendemos me apasionan. Esa mirada también guía lo que construyo: escuchar, explicar con cuidado y crear una web que hable de ti y acompañe a las personas que llegan a ella.</p><a className="text-link" href={instagram}>Encuéntrame en Instagram <span aria-hidden="true">↗</span></a></div></section>
+
 
         <section className="contact-section wrap" aria-labelledby="contact-title"><span className="contact-star" aria-hidden="true">✳</span><p className="eyebrow">SIGAMOS EN CONTACTO</p><h2 id="contact-title">Las buenas ideas<br />empiezan conversando.</h2><p>Comparto mi trabajo, aprendizajes y esta nueva etapa en Instagram.<br />Me encantará encontrarte por ahí.</p><a className="button light" href={instagram}>Hola, Andrea <span aria-hidden="true">↗</span></a></section>
       </main>

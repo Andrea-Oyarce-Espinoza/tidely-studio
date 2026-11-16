@@ -22,7 +22,7 @@ export const externalNavigation: NavigationItem[] = [
     
     {
         label: "Instagram",
-        href: "https://www.instagram.com/mama_programadora_/",
+        href: "https://www.instagram.com/tidy_studio_dev/",
         external: true,
         newTab: true,
     },

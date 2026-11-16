@@ -1,4 +1,10 @@
 /* Seasonal artwork: all shapes are native CSS. Motion lives in HolidayScene. */
+.home-blog { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; border-top: 1px solid var(--line); }
+.home-blog > div > p:not(.eyebrow), .home-blog article > p:not(.eyebrow) { color: var(--muted); font-size: 15px; }
+.home-blog article { padding: 35px; background: var(--lavender); border-radius: 10px; align-self: center; }
+.home-blog h3 { font-size: 30px; line-height: 1.2; letter-spacing: -.03em; }
+.home-blog h3 a:hover { text-decoration: underline; text-underline-offset: 5px; }
+@media (max-width: 650px) { .home-blog { grid-template-columns: minmax(0, 1fr); gap: 28px; }.home-blog article { padding: 26px; } }
 .seasonal-hero-art { position: relative; min-width: 0; padding-bottom: 44px; }
 .seasonal-hero-art .hero-art { width: 100%; }
 .seasonal-hero-art .art-sticker { z-index: 6; }
@@ -62,3 +68,6 @@
   .growth-section .button { gap: 18px; padding-inline: 18px; }
   .holiday-tree { right: 31px; top: 125px; }
 }
+
+.projects-list { display: grid; gap: 28px; }
+.project-info .tags { margin-block: 20px; }

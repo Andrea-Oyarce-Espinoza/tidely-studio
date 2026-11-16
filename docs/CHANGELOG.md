@@ -1,5 +1,30 @@
 # Changelog
 
+## 2026-11-15 — Recuperación del blog y actualización del portafolio
+
+- Detectado en producción un despliegue sin rutas de blog/admin, mientras Sanity conserva las dos entradas publicadas. La recuperación previa existía solo en el checkout local y fue reemplazada por un despliegue del código antiguo de GitHub.
+- Blog permanente en portada, después de proyectos y antes del proceso, con enlace accesible incluso sin última entrada disponible. Se conserva el editor privado de Sanity.
+- Retirada la sección y el acceso de Tidy Growth Lab en la portada. Catálogo de proyectos reales en content/projects.ts; solo Francia Academy, con dominio https://franciavarubin.cl y descripción de servicios, membresía y espacio de aprendizaje comprobados en su web pública.
+- Verificación reproducible de portada, blog, artículo, editor y 404 en scripts/verify-home.mjs.
+
+## 2026-11-07 — Editor privado del blog
+
+- Sanity provisionado en el proyecto Vercel existente con plan Free, configuración de Google ya vinculada y cuenta de Andrea verificada. Origen de producción autorizado con confirmación expresa.
+- Studio en español en `/admin`: editor enriquecido, validación de campos, vistas de borradores y publicaciones. Sin permisos de edición para visitantes.
+- Blog conectado al contenido persistente; publicación y retirada visibles al recargar sin nuevos despliegues. Primera entrada migrada sin sobrescrituras. Instagram actualizado a @tidy_studio_dev.
+- Comprobadas persistencia y privacidad de borradores, rechazo de escritura anónima, respuestas 200/404 y ausencia de credenciales en el HTML local. Build con Webpack y ESLint correctos.
+- React alineado con el editor; overrides compatibles de dependencias de herramientas. Auditoría de producción: 0 avisos altos/críticos y 14 moderados indirectos, principalmente minimatch en CLI de Sanity. No se aplicó el downgrade mayor sugerido por audit.
+- Guía de uso y operación en BLOG_ADMIN.md. Herramienta local para incorporar los borradores semanales a Sanity sin publicarlos.
+
+## 2026-11-06 — Blog y mirada educativa
+
+- Actualizados los enlaces y las menciones de contacto de Instagram a @tidy_studio_dev en portada, blog, páginas legales y configuración social.
+
+- Blog «Notas con sentido» en `/blog`, páginas por entrada, metadata, autoría y tiempo de lectura. Primera entrada: «Una web también puede acompañar».
+- Accesos desde navegación, portada y footer; presentación de Andrea como licenciada en educación y desarrolladora web para profesionales independientes.
+- Calendario propuesto de ocho lunes y criterios de voz en BLOG_EDITORIAL.md. Automatización semanal acordada: lunes 09:00, America/Santiago, borrador para revisión sin publicación automática.
+- Contenido en código con estado explícito; borradores excluidos del listado y de las rutas públicas. Sin dependencias nuevas, base de datos ni CMS.
+
 ## 2026-11-05 — Navidad y Tidy Growth Lab
 
 - Decoración navideña en el inicio con dibujos CSS y luces animadas en JavaScript, con pausa y respeto de movimiento reducido.
